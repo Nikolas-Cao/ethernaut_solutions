@@ -64,3 +64,16 @@ vault:
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+king_simulate :
+	forge script script/King.s.sol \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+king:
+	forge script ./script/King.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
