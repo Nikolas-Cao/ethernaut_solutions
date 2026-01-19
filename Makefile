@@ -77,3 +77,45 @@ king:
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+reentrance_simulate:
+	forge script script/ReEntrance.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+reentrance:
+	forge script ./script/ReEntrance.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv	
+
+elevator_simulate:
+	forge script script/Elevator.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+elevator:
+	forge script ./script/Elevator.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv	
+
+privacy_simulate:
+	forge script script/Privacy.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+privacy:
+	forge script ./script/Privacy.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
