@@ -119,3 +119,31 @@ privacy:
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+gatekeeper_one_simulate:
+	forge script script/GateKeeperOne.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+gatekeeper_one:
+	forge script ./script/GateKeeperOne.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+gatekeeper_two_simulate:
+	forge script script/GateKeeperTwo.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+gatekeeper_two:
+	forge script ./script/GateKeeperTwo.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
