@@ -147,3 +147,58 @@ gatekeeper_two:
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+naught_coin_simulate:
+	forge script script/NaughtCoin.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+naught_coin:
+	forge script ./script/NaughtCoin.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+preservation_simulate:
+	forge script script/Preservation.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+preservation:
+	forge script ./script/Preservation.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+recovery_simulate:
+	forge script script/Recovery.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+recovery:
+	forge script ./script/Recovery.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+magic_number_create_solver:
+	cast send --rpc-url $$SEPOLIA_RPC_URL \
+          --private-key $$PRIVATE_KEY \
+          --create 600a600c600039600a6000f3602a60005260206000f3
+
+magic_number_set_solver :
+	forge script ./script/MagicNumber.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
