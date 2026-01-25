@@ -202,3 +202,25 @@ magic_number_set_solver :
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+alien_codex_simulate:
+	forge script script/AlienCodex.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+alien_codex:
+	forge script ./script/AlienCodex.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+denial :
+	forge script ./script/Denial.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
