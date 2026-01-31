@@ -252,3 +252,31 @@ dex:
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+dex2_simulate:
+	forge script script/Dex2.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+dex2:
+	forge script ./script/Dex2.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+puzzle_wallet_simulate:
+	forge script script/PuzzleWallet.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+puzzle_wallet:
+	forge script ./script/PuzzleWallet.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
