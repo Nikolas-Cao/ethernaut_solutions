@@ -280,3 +280,73 @@ puzzle_wallet:
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+motor_bike_simulate:
+	forge script script/MotorBike.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+motor_bike:
+	forge script ./script/MotorBike.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+double_entry_point_simulate:
+	forge script script/DoubleEntryPoint.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+double_entry_point:
+	forge script ./script/DoubleEntryPoint.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+good_samaritan_simulate:
+	forge script script/GoodSamaritan.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+good_samaritan:
+	forge script ./script/GoodSamaritan.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+gatekeeper_three_simulate:
+	forge script script/GateKeeperThree.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+gatekeeper_three:
+	forge script ./script/GateKeeperThree.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+switch_simulate:
+	forge script script/Switch.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+switch:
+	forge script ./script/Switch.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
