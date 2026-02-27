@@ -350,3 +350,73 @@ switch:
 	--chain sepolia \
 	--broadcast \
 	-vvvv
+
+higher_order_simulate:
+	forge script script/HigherOrder.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+higher_order:
+	forge script ./script/HigherOrder.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
+
+stake_simulate:
+	forge script script/Stake.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+stake:
+	forge script ./script/Stake.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv 
+
+impersonator_simulate:
+	forge script script/Impersonator.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+impersonator:
+	forge script ./script/Impersonator.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv 
+
+magic_animal_carousel_simulate:
+	forge script script/MagicAnimalCarousel.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+magic_animal_carousel:
+	forge script ./script/MagicAnimalCarousel.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv 
+
+bet_house_simulate:
+	forge script script/BetHouse.s.sol \
+		--private-key $$PRIVATE_KEY \
+		--fork-url $$SEPOLIA_RPC_URL \
+		-vvvv
+
+bet_house:
+	forge script ./script/BetHouse.s.sol \
+	--rpc-url $$SEPOLIA_RPC_URL \
+	--private-key $$PRIVATE_KEY \
+	--chain sepolia \
+	--broadcast \
+	-vvvv
